@@ -69,9 +69,12 @@ class App extends Component {
     if (this.state.isStarted && this.state.isStopped) {
       // Reset
       this.setState({
+        timer: null,
         startTime: null,
+        currentTime: null,
         stopTime: null,
-        stoppedTimeOffset: null,
+        stoppedTimeOffset: 0,
+        stoppedTimeOffsetForLap: 0,
         lastLapTime: null,
         displayTime: '00:00.00',
         isStarted: false,
